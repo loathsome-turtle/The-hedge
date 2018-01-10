@@ -1,7 +1,6 @@
 import math 
 import random
 
-cardValues = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 suits = ['Spades','Hearts','Diamonds','Clubs']
 
 computerCards = []
@@ -10,8 +9,7 @@ playerCards = []
 playerValue = 0
 
 def deal():
-  computerCards = [cardValues[random.randint()], cardValues[random.randint()]]
+  computerCards.append(random.randint(1,10))
 
 deal()
-print(computerCArds)
-  
+print(computerCards)
