@@ -11,5 +11,7 @@ playerValue = 0
 
 def deal():
   computerCards = [cardValues[random.randint()], cardValues[random.randint()]]
-  
+
+deal()
+print(computerCArds)
   
