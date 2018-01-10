@@ -9,7 +9,8 @@ playerCards = []
 playerValue = 0
 
 def deal():
-  computerCards.append(random.randint(1,10))
+  computerCards.append(random.randint(1,13))
+  computerCards.append(random.randint(1,13))
 
 deal()
 print(computerCards)
