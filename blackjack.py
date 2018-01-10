@@ -11,6 +11,7 @@ playerValue = 0
 def faceCards(card):
   if card > 10:
     card = 10
+    return card
 
 def computerDeal():
   computerCards.append(random.randint(1,13))
