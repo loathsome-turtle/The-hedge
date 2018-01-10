@@ -12,6 +12,11 @@ def computerDeal():
   computerCards.append(random.randint(1,13))
   computerCards.append(random.randint(1,13))
 
+def playerDeal():
+  playerCards.append(random.randint(1,13))
+  playerCards.append(random.randint(1,13))
 
-deal()
+computerDeal()
+playerDeal()
 print(computerCards)
+print(playerCards)
