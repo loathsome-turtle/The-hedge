@@ -23,6 +23,12 @@ def playerDeal():
   playerCards.append(getCards())
   playerCards.append(getCards())
   
+def print(player, computer):
+  print("Your Cards: "),
+  print('[%s]' % ', '.join(map(str, player)))
+  print("Computer's Cards: "),
+  print('[%s]' % ', '.join(map(str, computer)))
+
 computerDeal()
 playerDeal()
 playerValue = sum(playerCards)
