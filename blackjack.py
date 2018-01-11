@@ -54,7 +54,9 @@ while (computerValue < playerValue):
   computerValue = sum(computerCards)
   if computerValue == 21:
     break
-    
+
+print(playerCards)
+print(computerCards)
 if playerValue > computerValue and playerValue <= 21:
   print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
