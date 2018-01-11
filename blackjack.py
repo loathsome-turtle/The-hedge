@@ -34,11 +34,11 @@ print("Computer's Cards: "),
 print('[%s]' % ', '.join(map(str, computerCards)))
 
 while True:
-  action = input("h/it or s/tand?")
-  action = action.lower()
   if playerValue > 21:
     print("You've gone over 21! You lost!")
     break
+  action = input("h/it or s/tand?")
+  action = action.lower()
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
