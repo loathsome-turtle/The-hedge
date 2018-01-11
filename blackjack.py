@@ -35,3 +35,7 @@ while (playerValue < 21):
   action = action.lower()
   if action == "hit" or action == "h":
     playerCards.append(getCards())
+  elif action == "stand" or action == "s":
+    break
+  else:
+    print("I'm not sure what you said, try again!")
