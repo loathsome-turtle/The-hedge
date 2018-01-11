@@ -24,11 +24,14 @@ def playerDeal():
   
 computerDeal()
 playerDeal()
-print(computerCards)
-print(playerCards)
-
 playerValue = sum(playerCards)
 computerValue = sum(computerCards)
+
+print("Welcome to Blackjack! The goal of the game is to get as close to 21 as possible, without going over. Type 'h' or 'hit' to draw a card, and type 's' or 'stand' when you're done")
+print("Your Cards: "),
+print('[%s]' % ', '.join(map(str, playerCards)))
+print("Computer's Cards: "),
+print('[%s]' % ', '.join(map(str, computerCards)))
 
 while (playerValue < 21):
   action = input("h/it or s/tand?")
