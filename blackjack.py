@@ -24,10 +24,10 @@ def playerDeal():
   playerCards.append(getCards())
   
 def printCards(player, computer):
-  print("Your Cards: "),
-  print('[%s]' % ', '.join(map(str, player)))
-  print("Computer's Cards: "),
-  print('[%s]' % ', '.join(map(str, computer)))
+  print("Your Cards: ", end = '')
+  print('%s' % ', '.join(map(str, player)))
+  print("Computer's Cards: ", end = '')
+  print('%s' % ', '.join(map(str, computer)))
 
 computerDeal()
 playerDeal()
