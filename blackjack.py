@@ -32,5 +32,5 @@ computerValue = sum(computerCards)
 
 while (playerValue < 21):
   action = input("h/it or s/tand?")
-  action.lower()
+  action = action.lower()
   if 
