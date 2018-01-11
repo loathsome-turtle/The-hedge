@@ -14,7 +14,7 @@ computerValue = 0
 playerCards = []
 playerValue = 0
 
-# A Function for Getting a Card
+# A Function for Getting a Card, Starts Off at 13 to Also Account For Face Cards (Jack, Queen, King)
 def getCards():
   card = random.randint(1,13)
   if card > 10:
