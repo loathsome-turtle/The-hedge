@@ -72,6 +72,10 @@ while True:
   # Carrying out the Commands of the Player
   if action == "hit" or action == "h":
     playerCards.append(getCards())
+    if playerValue > 21:
+      printAllCards(playerCards, computerCards)
+      print("You've gone over 21! You lost!")
+      sys.exit()
     playerValue = sum(playerCards)
     printPlayerCards(playerCards, computerCards)
   elif action == "stand" or action == "s":
