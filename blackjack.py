@@ -33,7 +33,7 @@ print('[%s]' % ', '.join(map(str, playerCards)))
 print("Computer's Cards: "),
 print('[%s]' % ', '.join(map(str, computerCards)))
 
-while (playerValue < 21):
+while True:
   action = input("h/it or s/tand?")
   action = action.lower()
   if action == "hit" or action == "h":
