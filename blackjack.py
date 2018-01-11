@@ -43,8 +43,10 @@ while True:
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
-    print(playerCards)
-    print(computerCards)
+    print("Your Cards: "),
+    print('[%s]' % ', '.join(map(str, playerCards)))
+    print("Computer's Cards: "),
+    print('[%s]' % ', '.join(map(str, computerCards)))
   elif action == "stand" or action == "s":
     break
   else:
@@ -54,13 +56,17 @@ while (computerValue < playerValue):
   computerCards.append(getCards())
   computerValue = sum(computerCards)
   if computerValue > 21 and playerValue <= 21:
-    print(playerCards)
-    print(computerCards)
+    print("Your Cards: "),
+    print('[%s]' % ', '.join(map(str, playerCards)))
+    print("Computer's Cards: "),
+    print('[%s]' % ', '.join(map(str, computerCards)))
     print("You Win! The computer has busted.")
     sys.exit()
 
-print(playerCards)
-print(computerCards)
+print("Your Cards: "),
+print('[%s]' % ', '.join(map(str, playerCards)))
+print("Computer's Cards: "),
+print('[%s]' % ', '.join(map(str, computerCards)))
 if playerValue > computerValue and playerValue <= 21:
   print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
