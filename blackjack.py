@@ -40,7 +40,7 @@ printCards(playerCards,computerCards)
 while True:
   if playerValue > 21:
     print("You've gone over 21! You lost!")
-    break
+    sys.exit()
   action = input("h/it or s/tand?")
   action = action.lower()
   if action == "hit" or action == "h":
