@@ -59,6 +59,6 @@ if playerValue > computerValue and playerValue <= 21:
 elif playerValue == computerValue and playerValue <= 21:
   print("It's a Tie!")
 elif playerValue < computerValue and playerValue <= 21:
-  print("The computer got a higher score, you lost!)"
+  print("The computer got a higher score, you lost!")
 else:
   print("You've gone over 21! You lost!")
