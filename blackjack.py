@@ -8,20 +8,25 @@ computerValue = 0
 playerCards = []
 playerValue = 0
 
-def faceCards(card):
+def getCards():
+  card = random.randint(1,13)
   if card > 10:
     card = 10
-    return card
+  return card
 
 def computerDeal():
-  computerCards.append(random.randint(1,13))
-  computerCards.append(random.randint(1,13))
+  computerCards.append(getCards())
+  computerCards.append(getCards())
 
 def playerDeal():
-  playerCards.append(random.randint(1,13))
-  playerCards.append(random.randint(1,13))
-
+  playerCards.append(getCards())
+  playerCards.append(getCards())
+  
 computerDeal()
 playerDeal()
 print(computerCards)
 print(playerCards)
+
+while (playerValue < 21):
+  playerValue = sum(playerCards)
+  computerValue = sum(computerCards)
