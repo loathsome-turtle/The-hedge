@@ -3,7 +3,7 @@
 ###########################################################################
 
 # Importing Modules
-# I removed import math cause we dont use it
+# import math <- pretty useless
 import random
 import sys
 
@@ -41,8 +41,7 @@ def printPlayerCards(player, computer):
 
 # A Function to Print the Player's Cards and the Computer's Cards
 def printAllCards(player, computer):
-  print("Your Cards: ", end = '')
-  print('%s' % ', '.join(map(str, player)))
+  printPlayerCards(player, computer)
   print("Computer's Cards: ", end = '')
   print('%s' % ', '.join(map(str, computer)))
 
