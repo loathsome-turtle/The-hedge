@@ -1,3 +1,7 @@
+###########################################################################
+###Tony I have no idea how to run the program again so you have to do it###
+###########################################################################
+
 # Importing Modules
 import math
 import random
@@ -43,7 +47,7 @@ computerValue = sum(computerCards)
 # Introduction, Includes Title, Names, Description and Directions
 print("Welcome to Blackjack! The goal of the game is to get as close to 21 as possible, without going over. Type 'h' or 'hit' to draw a card, and type 's' or 'stand' when you're done")
 print("Made by Tony and Jia Ming")
-printCards(playerCars,computerCards)
+printCards(playerCards,computerCards)
 
 # Allows the Player to Draw Cards
 while True:
