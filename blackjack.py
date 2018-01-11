@@ -40,9 +40,7 @@ while (playerValue < 21):
     playerCards.append(getCards())
     playerValue = sum(playerCards)
     print(playerCards)
-    print(playerValue)
     print(computerCards)
-    print(computerValue)
   elif action == "stand" or action == "s":
     break
   else:
