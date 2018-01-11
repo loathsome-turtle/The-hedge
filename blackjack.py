@@ -39,3 +39,6 @@ while (playerValue < 21):
     break
   else:
     print("I'm not sure what you said, try again!")
+
+while (computerValue < playerValue):
+  
