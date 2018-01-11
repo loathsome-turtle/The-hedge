@@ -1,6 +1,7 @@
 ###########################################################################
 ###Tony I have no idea how to run the program again so you have to do it###
 ###########################################################################
+# Also I'll probably do work at around 6-7 idk
 
 # Importing Modules
 # import math <- we don't actually use this
