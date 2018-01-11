@@ -27,6 +27,9 @@ playerDeal()
 print(computerCards)
 print(playerCards)
 
+playerValue = sum(playerCards)
+computerValue = sum(computerCards)
+
 while (playerValue < 21):
-  playerValue = sum(playerCards)
-  computerValue = sum(computerCards)
+  action = raw_input("hit or stand?")
+  if 
