@@ -3,7 +3,7 @@
 ###########################################################################
 
 # Importing Modules
-import math
+# import math <- we don't actually use this
 import random
 import sys
 
