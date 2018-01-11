@@ -1,5 +1,6 @@
-import math 
+import math
 import random
+import sys
 
 suits = ['Spades','Hearts','Diamonds','Clubs']
 
@@ -52,8 +53,11 @@ while True:
 while (computerValue < playerValue):
   computerCards.append(getCards())
   computerValue = sum(computerCards)
-  if computerValue == 21:
-    break
+  if computerValue > 21 and playerValue <= 21:
+    print(playerCards)
+    print(computerCards)
+    print("You Win! The computer has busted.")
+    sys.exit()
 
 print(playerCards)
 print(computerCards)
@@ -61,5 +65,5 @@ if playerValue > computerValue and playerValue <= 21:
   print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
   print("It's a Tie!")
-elif playerValue < computerValue and playerValue <= 21:
+elif playerValue < computerValue and playerValue <= 21 and computerValue <= 21:
   print("The computer got a higher score, you lost!")
