@@ -3,6 +3,7 @@
 ###########################################################################
 
 # Importing Modules
+# I removed import math cause we dont use it
 import random
 import sys
 
