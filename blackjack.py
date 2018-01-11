@@ -23,7 +23,7 @@ def playerDeal():
   playerCards.append(getCards())
   playerCards.append(getCards())
   
-def print(player, computer):
+def printCards(player, computer):
   print("Your Cards: "),
   print('[%s]' % ', '.join(map(str, player)))
   print("Computer's Cards: "),
@@ -35,10 +35,7 @@ playerValue = sum(playerCards)
 computerValue = sum(computerCards)
 
 print("Welcome to Blackjack! The goal of the game is to get as close to 21 as possible, without going over. Type 'h' or 'hit' to draw a card, and type 's' or 'stand' when you're done")
-print("Your Cards: "),
-print('[%s]' % ', '.join(map(str, playerCards)))
-print("Computer's Cards: "),
-print('[%s]' % ', '.join(map(str, computerCards)))
+printCards(playerCards,computerCards)
 
 while True:
   if playerValue > 21:
@@ -49,10 +46,7 @@ while True:
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
-    print("Your Cards: "),
-    print('[%s]' % ', '.join(map(str, playerCards)))
-    print("Computer's Cards: "),
-    print('[%s]' % ', '.join(map(str, computerCards)))
+    printCards(playerCards, computerCards)
   elif action == "stand" or action == "s":
     break
   else:
@@ -62,17 +56,11 @@ while (computerValue < playerValue):
   computerCards.append(getCards())
   computerValue = sum(computerCards)
   if computerValue > 21 and playerValue <= 21:
-    print("Your Cards: "),
-    print('[%s]' % ', '.join(map(str, playerCards)))
-    print("Computer's Cards: "),
-    print('[%s]' % ', '.join(map(str, computerCards)))
+    printCards(playerCards, computerCards)
     print("You Win! The computer has busted.")
     sys.exit()
 
-print("Your Cards: "),
-print('[%s]' % ', '.join(map(str, playerCards)))
-print("Computer's Cards: "),
-print('[%s]' % ', '.join(map(str, computerCards)))
+printCards(playerCards, computerCards)
 if playerValue > computerValue and playerValue <= 21:
   print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
