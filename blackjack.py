@@ -1,10 +1,8 @@
 ###########################################################################
 ###Tony I have no idea how to run the program again so you have to do it###
 ###########################################################################
-# Also I'll probably do work at around 7-8 idk
 
 # Importing Modules
-# import math <- we don't actually use this
 import random
 import sys
 
@@ -15,7 +13,7 @@ computerValue = 0
 playerCards = []
 playerValue = 0
 
-# A Function for Getting a Card, Starts Off at 13 to Also Account For Face Cards (Jack, Queen, King)
+# A Function for Getting a Card
 def getCards():
   card = random.randint(1,13)
   if card > 10:
@@ -32,10 +30,17 @@ def playerDeal():
   playerCards.append(getCards())
   playerCards.append(getCards())
   
-# A Function to Print the Player's Cards and the Computer's Cards
-def printCards(player, computer):
+# A Function to Print the Player's Cards and the Computer's First Card
+def printPlayerCards(player, computer):
   print("Your Cards: ", end = '')
   print('%s' % ', '.join(map(str, player)))
+  print("Computer Cards: ", end = '')
+  print(computer[0], end = '')
+  print(", X")
+
+# A Function to Print the Player's Cards and the Computer's Cards
+def printAllCards(player, computer):
+  printPlayerCards(player, computer)
   print("Computer's Cards: ", end = '')
   print('%s' % ', '.join(map(str, computer)))
 
@@ -48,7 +53,7 @@ computerValue = sum(computerCards)
 # Introduction, Includes Title, Names, Description and Directions
 print("Welcome to Blackjack! The goal of the game is to get as close to 21 as possible, without going over. Type 'h' or 'hit' to draw a card, and type 's' or 'stand' when you're done")
 print("Made by Tony and Jia Ming")
-printCards(playerCards,computerCards)
+printPlayerCards(playerCards, computerCards)
 
 # Allows the Player to Draw Cards
 while True:
@@ -66,7 +71,7 @@ while True:
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
-    printCards(playerCards, computerCards)
+    printPlayerCards(playerCards, computerCards)
   elif action == "stand" or action == "s":
     break
   else:
@@ -77,12 +82,12 @@ while (computerValue < playerValue):
   computerCards.append(getCards())
   computerValue = sum(computerCards)
   if computerValue > 21 and playerValue <= 21:
-    printCards(playerCards, computerCards)
+    printAllCards(playerCards, computerCards)
     print("You Win! The computer has busted.")
     sys.exit()
 
 # Evaluating The Outcome of the Game
-printCards(playerCards, computerCards)
+printAllCards(playerCards, computerCards)
 if playerValue > computerValue and playerValue <= 21:
   print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
