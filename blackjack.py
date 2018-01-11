@@ -35,10 +35,12 @@ while (playerValue < 21):
   action = action.lower()
   if action == "hit" or action == "h":
     playerCards.append(getCards())
+    playerValue = sum(playerCards)
   elif action == "stand" or action == "s":
     break
   else:
     print("I'm not sure what you said, try again!")
 
 while (computerValue < playerValue):
-  
+  computerCards.append(getCards())
+  computerValue = sum(computerCards)
