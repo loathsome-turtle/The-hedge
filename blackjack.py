@@ -41,7 +41,8 @@ def printPlayerCards(player, computer):
 
 # A Function to Print the Player's Cards and the Computer's Cards
 def printAllCards(player, computer):
-  printPlayerCards(player, computer)
+  print("Your Cards: ", end = '')
+  print('%s' % ', '.join(map(str, player)))
   print("Computer's Cards: ", end = '')
   print('%s' % ', '.join(map(str, computer)))
 
