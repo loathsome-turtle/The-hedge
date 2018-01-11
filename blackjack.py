@@ -31,6 +31,6 @@ playerValue = sum(playerCards)
 computerValue = sum(computerCards)
 
 while (playerValue < 21):
-  action = input("hit or stand?")
-  if action == "hit" or action == "h":
-    getCards()
+  action = input("h/it or s/tand?")
+  action.lower()
+  if 
