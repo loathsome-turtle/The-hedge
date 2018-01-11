@@ -47,3 +47,14 @@ while (playerValue < 21):
 while (computerValue < playerValue):
   computerCards.append(getCards())
   computerValue = sum(computerCards)
+  if computerValue == 21:
+    break
+    
+if playerValue > computerValue and playerValue <= 21:
+  print("You Win!)
+elif playerValue == computerValue && playerValue <= 21:
+  print("It's a Tie!")
+elif playerValue < computerValue && playerValue <= 21:
+  print("The computer got a higher score, you lost!)"
+else:
+  print("You've gone over 21! You lost!")
