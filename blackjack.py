@@ -36,6 +36,9 @@ print('[%s]' % ', '.join(map(str, computerCards)))
 while True:
   action = input("h/it or s/tand?")
   action = action.lower()
+  if playerValue > 21:
+    print("You've gone over 21! You lost!")
+    break
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
@@ -58,5 +61,3 @@ elif playerValue == computerValue and playerValue <= 21:
   print("It's a Tie!")
 elif playerValue < computerValue and playerValue <= 21:
   print("The computer got a higher score, you lost!")
-else:
-  print("You've gone over 21! You lost!")
