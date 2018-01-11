@@ -39,6 +39,10 @@ while (playerValue < 21):
   if action == "hit" or action == "h":
     playerCards.append(getCards())
     playerValue = sum(playerCards)
+    print(playerCards)
+    print(playerValue)
+    print(computerCards)
+    print(computerValue)
   elif action == "stand" or action == "s":
     break
   else:
@@ -51,7 +55,7 @@ while (computerValue < playerValue):
     break
     
 if playerValue > computerValue and playerValue <= 21:
-  print("You Win!)
+  print("You Win!")
 elif playerValue == computerValue and playerValue <= 21:
   print("It's a Tie!")
 elif playerValue < computerValue and playerValue <= 21:
