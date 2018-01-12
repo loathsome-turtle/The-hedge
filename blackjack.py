@@ -74,8 +74,8 @@ def game():
   # Dealing and setting the Value
   computerDeal()
   playerDeal()
-  playerValue = sumOfCards(playerCards)
-  computerValue = sumOfCards(computerCards)
+  playerValue = sumOfCards(playerCards, playerValue)
+  computerValue = sumOfCards(computerCards, computerValue)
   printPlayerCards(playerCards, computerCards)
 
   # Allows the Player to Draw Cards
@@ -97,7 +97,7 @@ def game():
         printAllCards(playerCards, computerCards)
         print("You've gone over 21! You lost!")
         playAgain()
-      playerValue = sumOfCards(playerCards)
+      playerValue = sumOfCards(playerCards, playerValue)
       printPlayerCards(playerCards, computerCards)
     elif action == "stand" or action == "s":
       break
@@ -107,7 +107,7 @@ def game():
   # Allowing the Computer to Draw Cards Until It's Busted or It's Score is Higher Than the Player's
   while (computerValue < playerValue):
     computerCards.append(getCards())
-    computerValue = sumOfCards(computerCards)
+    computerValue = sumOfCards(computerCards, computerValue)
     if computerValue > 21 and playerValue <= 21:
       printAllCards(playerCards, computerCards)
       print("You Win! The computer has busted.")
