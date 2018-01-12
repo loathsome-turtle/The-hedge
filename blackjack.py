@@ -111,7 +111,6 @@ def game():
     playAgain()
 
 # Introduction, Includes Title, Names, Description and Directions
-
 print("Welcome to Blackjack! The goal of the game is to get as close to 21 as possible, without going over. Type 'h' or 'hit' to draw a card, and type 's' or 'stand' when you're done")
 print("Made by Tony and Jia Ming")
 game()
