@@ -4,6 +4,10 @@ import sys
 
 # Creating Variables
 suits = ['Spades','Hearts','Diamonds','Clubs']
+computerCards = []
+computerValue = 0
+playerCards = []
+playerValue = 0
 
 # A Function for Getting a Card
 def getCards():
