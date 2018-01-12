@@ -44,10 +44,10 @@ def playAgain():
   if answer == 'yes' or answer == 'y':
     game()
   if answer == 'no' or answer == 'n':
-    print('Thank you for playing. Please come again!")
+    print("Thank you for playing. Please come again!")
     sys.exit()
   else:
-    print('I\'m not quite sure what you said')
+    print("I'm not quite sure what you said")
     playAgain()
                  
 # MAIN GAME FUNCTION
@@ -118,5 +118,5 @@ try:
   print("Made by Tony and Jia Ming")
   game()
 except:
-  print('Uh Oh, looks like something isnt\'t working right now. Please try restarting the game.")
+  print("Uh Oh, looks like something isn't working right now. Please try restarting the game.")
   sys.exit()
