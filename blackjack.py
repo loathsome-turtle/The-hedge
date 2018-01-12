@@ -1,9 +1,4 @@
-###########################################################################
-###Tony I have no idea how to run the program again so you have to do it###
-###########################################################################
-
 # Importing Modules
-# import math <- pretty useless
 import random
 import sys
 
@@ -45,6 +40,13 @@ def printAllCards(player, computer):
   print('%s' % ', '.join(map(str, player)))
   print("Computer's Cards: ", end = '')
   print('%s' % ', '.join(map(str, computer)))
+
+def sumOfCards(cards, value):
+  for card in cards:
+    if card == 1 and value < 21:
+      value += 11
+    else:
+      value += card
 
 # Dealing and setting the Value
 computerDeal()
