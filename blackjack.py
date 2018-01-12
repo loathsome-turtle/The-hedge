@@ -56,10 +56,33 @@ def game():
     playerCards.append(getCards())
     playerCards.append(getCards())
     
+  def faceCards(card):
+    face = random.randint(1,5)
+    if card == 10:
+      if face == 1:
+        return 10
+      elif face == 2:
+        return "J"
+      elif face == 3:
+        return "Q"
+      elif face == 4:
+        return "K"
+    else:
+      return card
+
+  def printFaces(cards):
+    newCards = []
+    if 10 in cards:
+      for card in cards:
+        newCards.append(faceCards(card))
+      print('%s' % ', '.join(map(str, newCards)))
+    else:
+      print('%s' % ', '.join(map(str, cards)))
+
   # A Function to Print the Player's Cards and the Computer's First Card
   def printPlayerCards(player, computer):
     print("Your Cards: ", end = '')
-    print('%s' % ', '.join(map(str, player)))
+    printFaces(player)
     print("Computer Cards: ", end = '')
     print(computer[0], end = '')
     print(", X")
@@ -67,9 +90,9 @@ def game():
   # A Function to Print the Player's Cards and the Computer's Cards
   def printAllCards(player, computer):
     print("Your Cards: ", end = '')
-    print('%s' % ', '.join(map(str, player)))
+    printFaces(player)
     print("Computer's Cards: ", end = '')
-    print('%s' % ', '.join(map(str, computer)))
+    printFaces(computer)
      
   # Dealing and setting the Value
   computerDeal()
