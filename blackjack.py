@@ -33,18 +33,18 @@ def game():
   
   # A Function For Adding Cards in Blackjack
   def sumOfCards(cards, value):
-  value = 0
-  if 1 in cards:
-    for card in cards:
-      if card == 1 and value < 21:
-        value += 11
-      else:
-        value += card
-    if value > 21:
+    value = 0
+    if 1 in cards:
+      for card in cards:
+        if card == 1 and value < 21:
+          value += 11
+        else:
+          value += card
+      if value > 21:
+        value = sum(cards)
+    else:
       value = sum(cards)
-  else:
-    value = sum(cards)
-  return value
+    return value
   
   # A Function to Deal Cards to the Computer
   def computerDeal():
