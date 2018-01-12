@@ -30,7 +30,22 @@ def game():
     if card > 10:
       card = 10
     return card
-
+  
+  # A Function For Adding Cards in Blackjack
+  def sumOfCards(cards, value):
+  value = 0
+  if 1 in cards:
+    for card in cards:
+      if card == 1 and value < 21:
+        value += 11
+      else:
+        value += card
+    if value > 21:
+      value = sum(cards)
+  else:
+    value = sum(cards)
+  return value
+  
   # A Function to Deal Cards to the Computer
   def computerDeal():
     computerCards.append(getCards())
@@ -59,8 +74,8 @@ def game():
   # Dealing and setting the Value
   computerDeal()
   playerDeal()
-  playerValue = sum(playerCards)
-  computerValue = sum(computerCards)
+  playerValue = sumOfCards(playerCards)
+  computerValue = sumOfCards(computerCards)
   printPlayerCards(playerCards, computerCards)
 
   # Allows the Player to Draw Cards
@@ -82,7 +97,7 @@ def game():
         printAllCards(playerCards, computerCards)
         print("You've gone over 21! You lost!")
         playAgain()
-      playerValue = sum(playerCards)
+      playerValue = sumOfCards(playerCards)
       printPlayerCards(playerCards, computerCards)
     elif action == "stand" or action == "s":
       break
@@ -92,7 +107,7 @@ def game():
   # Allowing the Computer to Draw Cards Until It's Busted or It's Score is Higher Than the Player's
   while (computerValue < playerValue):
     computerCards.append(getCards())
-    computerValue = sum(computerCards)
+    computerValue = sumOfCards(computerCards)
     if computerValue > 21 and playerValue <= 21:
       printAllCards(playerCards, computerCards)
       print("You Win! The computer has busted.")
